@@ -1,1 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
 
+.image-container {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+#pic1 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#pic2 {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* Picture 1 leaves */
+
+#pic1.leave {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* Picture 2 enters */
+
+#pic2.enter {
+    transform: translateY(0);
+    opacity: 1;
+}
